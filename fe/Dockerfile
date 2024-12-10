@@ -5,5 +5,5 @@ COPY . /app
 RUN yarn
 
 EXPOSE 5173
-CMD ["yarn ", "start"]
+CMD ["yarn", "start"]
 

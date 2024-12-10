@@ -1,10 +1,6 @@
-FROM python:3.10
+FROM speech_to_text:base
 
 WORKDIR /app
-
-COPY requirements.txt requirements.txt
-
-RUN pip install -r requirements.txt
 
 COPY . .
 

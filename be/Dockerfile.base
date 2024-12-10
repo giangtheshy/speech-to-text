@@ -1,0 +1,30 @@
+FROM nvidia/cuda:12.4.0-cudnn-devel-ubuntu22.04
+
+# Cài đặt các phụ thuộc hệ thống và thiết lập liên kết cho python3.10
+RUN apt-get update && apt-get install -y \
+    portaudio19-dev \
+    git \
+    python3.10 \
+    python3.10-distutils \
+    python3-pip \
+    libffi7 \
+    libp11-kit0 \
+    wget \
+    libgl1-mesa-glx \
+    libglib2.0-0 \
+    && ln -s /usr/bin/python3.10 /usr/bin/python \
+    && rm -rf /var/lib/apt/lists/*
+
+# Cài đặt pip và các gói Python
+RUN pip install --upgrade pip
+RUN pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu124
+
+# Clone repository GFPGAN
+COPY . /app
+
+# Thiết lập thư mục làm việc chính
+WORKDIR /app
+
+
+# Cài đặt các phụ thuộc Python
+RUN pip install -r requirements.txt
