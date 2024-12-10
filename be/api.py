@@ -39,9 +39,8 @@ async def websocket_endpoint(websocket: WebSocket):
 
                 # Feed audio data into the recorder
                 try:
-                    # recorder.feed_audio(data)
-                    # transcription = recorder.text()
-                    transcription = "okie nhe "
+                    recorder.feed_audio(data)
+                    transcription = recorder.text()
                     
                     if transcription:
                         await websocket.send_text(transcription + " ")

@@ -151,3 +151,9 @@ RuntimeError: FFmpeg extension is not available.
 2024-12-10 17:29:59.545 - RealTimeSTT: root - INFO - Starting RealTimeSTT
 2024-12-10 17:29:59.584 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
 2024-12-10 17:29:59.585 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2024-12-10 17:30:00.444 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2024-12-10 17:30:00.456 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2024-12-10 17:30:00.456 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2024-12-10 17:30:18.597 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2024-12-10 17:30:18.600 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2024-12-10 17:30:18.600 - RealTimeSTT: api - INFO - RealtimeSTT recorder initialized successfully.
