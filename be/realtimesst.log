@@ -157,3 +157,6 @@ RuntimeError: FFmpeg extension is not available.
 2024-12-10 17:30:18.597 - RealTimeSTT: root - DEBUG - Main transcription model ready
 2024-12-10 17:30:18.600 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
 2024-12-10 17:30:18.600 - RealTimeSTT: api - INFO - RealtimeSTT recorder initialized successfully.
+2024-12-10 17:32:02.124 - RealTimeSTT: root - DEBUG - Receive from stdout pipe
+2024-12-10 17:32:02.191 - RealTimeSTT: api - INFO - Client disconnected
+2024-12-10 17:32:02.202 - RealTimeSTT: api - INFO - Client disconnected
