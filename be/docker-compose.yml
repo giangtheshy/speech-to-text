@@ -1,0 +1,10 @@
+services:
+  speech_to_text:
+    container_name: speech_to_text
+    restart: unless-stopped
+    build:
+      context: ./
+    ports:
+      - 8000:8000
+    volumes:
+      - ./:/app

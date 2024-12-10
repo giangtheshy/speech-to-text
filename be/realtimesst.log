@@ -1,0 +1,153 @@
+2024-12-10 17:14:35.025 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2024-12-10 17:14:35.076 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2024-12-10 17:14:35.077 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2024-12-10 17:14:37.030 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2024-12-10 17:14:37.542 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "C:\Python312\Lib\ctypes\__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2024-12-10 17:14:37.565 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2024-12-10 17:14:37.980 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "C:\Python312\Lib\ctypes\__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2024-12-10 17:14:37.988 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2024-12-10 17:14:38.652 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "C:\Python312\Lib\ctypes\__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2024-12-10 17:14:38.656 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2024-12-10 17:14:38.657 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2024-12-10 17:14:47.128 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2024-12-10 17:14:47.360 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2024-12-10 17:14:47.360 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2024-12-10 17:15:06.529 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2024-12-10 17:15:06.541 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2024-12-10 17:15:06.542 - RealTimeSTT: api - INFO - RealtimeSTT recorder initialized successfully.
+2024-12-10 17:15:06.562 - RealTimeSTT: api - INFO - Client connected
+2024-12-10 17:15:06.566 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2024-12-10 17:15:06.630 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2024-12-10 17:15:06.631 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2024-12-10 17:15:07.609 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2024-12-10 17:15:07.683 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2024-12-10 17:15:07.683 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2024-12-10 17:15:25.410 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2024-12-10 17:15:25.412 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2024-12-10 17:15:25.413 - RealTimeSTT: api - INFO - RealtimeSTT recorder initialized successfully.
+2024-12-10 17:17:23.254 - RealTimeSTT: root - INFO - Setting listen time
+2024-12-10 17:17:23.254 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2024-12-10 17:17:23.264 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2024-12-10 17:22:26.471 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2024-12-10 17:22:26.549 - RealTimeSTT: root - INFO - Setting listen time
+2024-12-10 17:22:26.549 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2024-12-10 17:22:26.632 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2024-12-10 17:29:35.937 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2024-12-10 17:29:35.978 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2024-12-10 17:29:35.982 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2024-12-10 17:29:36.899 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2024-12-10 17:29:36.915 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "C:\Python312\Lib\ctypes\__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2024-12-10 17:29:36.924 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2024-12-10 17:29:36.942 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "C:\Python312\Lib\ctypes\__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2024-12-10 17:29:36.946 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2024-12-10 17:29:36.964 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "C:\Python312\Lib\ctypes\__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: Could not find module 'D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2024-12-10 17:29:36.967 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2024-12-10 17:29:36.968 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project\external\reactjs\test-stt\be\venv\Lib\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2024-12-10 17:29:39.150 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2024-12-10 17:29:39.157 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2024-12-10 17:29:39.158 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2024-12-10 17:29:59.508 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2024-12-10 17:29:59.517 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2024-12-10 17:29:59.518 - RealTimeSTT: api - INFO - RealtimeSTT recorder initialized successfully.
+2024-12-10 17:29:59.540 - RealTimeSTT: api - INFO - Client connected
+2024-12-10 17:29:59.545 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2024-12-10 17:29:59.584 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2024-12-10 17:29:59.585 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
