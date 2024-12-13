@@ -5,14 +5,6 @@ interface WebSocketStatus {
   error: string | null;
 }
 
-/**
- * Component SpeechToText:
- * - Kết nối WebSocket đến server backend.
- * - Xin quyền truy cập microphone, khởi tạo MediaRecorder.
- * - Ghi âm và gửi audio chunks qua WebSocket.
- * - Nhận transcript realtime từ server và hiển thị.
- * - Xử lý các trường hợp lỗi, disconnect, ...
- */
 const SpeechToText: React.FC = () => {
   const [transcript, setTranscript] = useState<string>("");
   const [isRecording, setIsRecording] = useState<boolean>(false);
@@ -43,6 +35,7 @@ const SpeechToText: React.FC = () => {
 
     ws.onmessage = (event) => {
       const data = event.data;
+      // Mỗi message nhận được là final result
       setTranscript((prev) => prev + data);
     };
 
@@ -64,7 +57,6 @@ const SpeechToText: React.FC = () => {
       }
       stopRecording();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const startRecording = async () => {
@@ -77,13 +69,10 @@ const SpeechToText: React.FC = () => {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       audioStreamRef.current = stream;
 
+      // Sử dụng định dạng tương thích với ffmpeg: audio/webm; codecs=opus
       const mediaRecorder = new MediaRecorder(stream, {
         mimeType: "audio/webm; codecs=opus",
       });
-
-      mediaRecorder.onstart = () => {
-        console.log("Đã bắt đầu ghi âm");
-      };
 
       mediaRecorder.ondataavailable = (e) => {
         const chunk = e.data;
@@ -95,24 +84,21 @@ const SpeechToText: React.FC = () => {
               websocketRef.current.send(arrayBuffer);
             }
           };
-          reader.onerror = () => {
-            console.error("Lỗi đọc dữ liệu blob audio.");
-          };
           reader.readAsArrayBuffer(chunk);
         }
       };
 
-      // Ép kiểu sự kiện onerror để truy cập error
       mediaRecorder.onerror = (evt: Event) => {
         const errorEvent = evt as unknown as { error?: DOMException };
         console.error("Lỗi MediaRecorder:", errorEvent.error);
         setError(`Lỗi MediaRecorder: ${errorEvent.error?.message || "Không xác định"}`);
       };
 
-      mediaRecorder.start(250);
+      mediaRecorder.start(1000);
       mediaRecorderRef.current = mediaRecorder;
       setIsRecording(true);
       setError(null);
+      setTranscript(""); // Mỗi lần bắt đầu ghi âm mới, xóa transcript cũ
     } catch (err: any) {
       console.error("Lỗi truy cập microphone:", err);
       setError("Không thể truy cập microphone. Vui lòng kiểm tra quyền truy cập.");
@@ -134,7 +120,6 @@ const SpeechToText: React.FC = () => {
   return (
     <div style={{ maxWidth: "600px", margin: "0 auto", padding: "20px", fontFamily: "sans-serif" }}>
       <h1>Realtime Speech to Text</h1>
-
       {error && <div style={{ color: "red", marginBottom: "10px" }}>Lỗi: {error}</div>}
 
       <div style={{ marginBottom: "10px" }}>
@@ -155,7 +140,7 @@ const SpeechToText: React.FC = () => {
       <div>
         <h2>Kết quả:</h2>
         <p style={{ whiteSpace: "pre-wrap", border: "1px solid #ccc", padding: "10px", minHeight: "100px" }}>
-          {transcript}
+          {transcript || (isRecording ? "Đang nhận diện..." : "")}
         </p>
       </div>
     </div>

@@ -12,8 +12,15 @@ RUN yarn install
 # Copy the rest of the application code
 COPY . .
 
-# Expose the port that Vite runs on
-EXPOSE 5173
+RUN NODE_OPTIONS="--max-old-space-size=8192 " yarn build
+# EXPOSE 4500
+# CMD ["npm ", "start"]
 
-# Set the command to run the development server
-CMD ["yarn", "dev", "--host"]
+
+# production stage
+# FROM nginx:1.17 as nginx
+FROM nginx:1.17-alpine as nginx
+EXPOSE 5173
+COPY --from=build-stage /app/dist /usr/share/nginx/html
+COPY --from=build-stage /app/.env /usr/share/nginx/html/.env
+COPY ./default.conf /etc/nginx/conf.d/default.conf
